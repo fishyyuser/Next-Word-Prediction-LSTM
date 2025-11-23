@@ -1,5 +1,3 @@
-"""
-
 # 🧠 Next Word Prediction Using LSTM
 
 A deep learning project that predicts **the next word in a sentence** using an **LSTM-based language model** trained on Shakespeare’s _Hamlet_. It implements a complete NLP pipeline — from dataset preprocessing and sequence creation to model training, evaluation, and deployment via **Streamlit**.
