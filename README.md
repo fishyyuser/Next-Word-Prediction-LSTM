@@ -1,117 +1,135 @@
-🧠 Next Word Prediction Using LSTM
+"""
 
-A deep learning project that predicts the next word in a sentence using an LSTM-based language model trained on Shakespeare’s Hamlet. The project includes a full NLP pipeline — from data preprocessing and sequence generation to model training, evaluation, and deployment with Streamlit.
+# 🧠 Next Word Prediction Using LSTM
 
-🚀 Project Features
+A deep learning project that predicts **the next word in a sentence** using an **LSTM-based language model** trained on Shakespeare’s _Hamlet_. It implements a complete NLP pipeline — from dataset preprocessing and sequence creation to model training, evaluation, and deployment via **Streamlit**.
 
-Uses Long Short-Term Memory (LSTM) networks for sequence prediction
+---
 
-Trained on the full text of Shakespeare’s Hamlet
+## 🚀 Project Features
 
-End-to-end workflow: preprocessing → training → evaluation → deployment
+- LSTM architecture for next-word sequence prediction
+- Trained on Shakespeare’s **_Hamlet_**
+- End-to-end workflow: _preprocessing → training → evaluation → deployment_
+- **Streamlit** web application for real-time word prediction
+- **Early stopping** applied to minimize overfitting
 
-Streamlit web app for real-time prediction
+---
 
-Implements early stopping to reduce overfitting
+## 📌 Tech Stack
 
-📌 Tech Stack
-Component	Technology
-Programming Language	Python
-Deep Learning	TensorFlow / Keras
-NLP Tools	Tokenizer, Embedding, Padding
-Deployment	Streamlit
-Dataset	Shakespeare — Hamlet
-📂 Project Structure
-├── data/
-│   └── hamlet.txt
-├── notebooks/
-│   └── model_training.ipynb
-├── saved_model/
-├── streamlit_app.py
-├── requirements.txt
+| Component            | Technology                    |
+| -------------------- | ----------------------------- |
+| Programming Language | Python                        |
+| Deep Learning        | TensorFlow / Keras            |
+| NLP Tools            | Tokenizer, Embedding, Padding |
+| Deployment           | Streamlit                     |
+| Dataset              | Shakespeare — _Hamlet_        |
+
+---
+
+## 📂 Project Structure
+
+📁 Next-Word-Prediction-LSTM  
+│  
+├── 📁 data  
+│ └── hamlet.txt  
+│  
+├── 📁 notebooks  
+│ └── model_training.ipynb  
+│  
+├── 📁 saved_model  
+│  
+├── streamlit_app.py  
+├── requirements.txt  
 └── README.md
 
-🔧 How It Works
-1️⃣ Data Preprocessing
+---
 
-Load and clean raw text
+## 🔧 How It Works
 
-Tokenize text and map each word to an index
+### 🔹 1. Data Preprocessing
 
-Generate input–output word sequences
+- Load and clean raw text
+- Tokenize text and convert words to integer indices
+- Create input–output sequences for next-word prediction
+- Pad sequences to uniform length for model input
 
-Pad sequences to uniform length
+### 🔹 2. Model Architecture
 
-2️⃣ Model Architecture
+- **Embedding layer**
+- **Two stacked LSTM layers**
+- **Dense + Softmax output layer** to generate probability for the next word
 
-Embedding layer
+### 🔹 3. Training
 
-Two stacked LSTM layers
+- Optimizer: `Adam`
+- Loss function: `Categorical Cross-Entropy`
+- Early stopping monitors validation loss to prevent overfitting
 
-Dense layer with softmax for next-word probability
+### 🔹 4. Evaluation
 
-3️⃣ Training
+Assessed using multiple sentence prompts to determine prediction accuracy and linguistic coherence.
 
-Optimizer: Adam
+---
 
-Loss: Categorical Cross-Entropy
-
-Early stopping to prevent overfitting
-
-4️⃣ Evaluation
-
-Tested on example inputs to measure prediction accuracy and sentence coherence.
-
-🌐 Streamlit Web App
+## 🌐 Streamlit Web App
 
 Run locally:
 
+```bash
 pip install -r requirements.txt
 streamlit run streamlit_app.py
+```
 
-
-Enter any sentence and get the predicted next word in real time.
 Example:
 
-Input: To be or not to
-Output: be
+```bash
+ Input: To be or not to
+ Output: be
+```
 
-📈 Results
+---
 
-The trained model shows strong ability to auto-complete text and capture linguistic style of Shakespearean writing.
-Example generations:
+## 📈 Results
 
-Input	Predicted Next Word
-"The king shall never"	speak
-"My lord I have"	done
-"To be or not to"	be
-🛠️ Setup & Installation
+The trained model demonstrates strong ability to auto-complete sentences and replicate Shakespeare-style language.
+
+| Input                  | Predicted Next Word |
+| ---------------------- | ------------------- |
+| "The king shall never" | speak               |
+| "My lord I have"       | done                |
+| "To be or not to"      | be                  |
+
+---
+
+## 🛠️ Setup & Installation
+
+```bash
 git clone <your-repo-link>
 cd <repo-name>
 pip install -r requirements.txt
+```
 
-📌 Future Improvements
+---
 
-Train on larger multi-author corpora
+## 📌 Future Improvements
 
-Use Bidirectional LSTM / Transformer for improved performance
+- Train on larger multi-author corpora
+- Use **Bidirectional LSTM** / **Transformers** for improved accuracy
+- Predict **multiple future words** instead of just one
+- Export model & offer **REST API** deployment
 
-Predict multiple future words instead of one
+---
 
-Add model export & API mode
+## 🤝 Contributing
 
-🤝 Contributing
-
-Contributions are welcome!
+Contributions are welcome!  
 Feel free to open issues or submit pull requests 💡
 
-📜 License
+---
 
-This project is licensed under the MIT License.
+## 📜 License
 
-Contributions are welcome!
-Feel free to open issues or submit pull requests 💡
-
-📜 License
-
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+"""
