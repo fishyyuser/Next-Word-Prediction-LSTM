@@ -89,18 +89,6 @@ Example:
 
 ---
 
-## 📈 Results
-
-The trained model demonstrates strong ability to auto-complete sentences and replicate Shakespeare-style language.
-
-| Input                  | Predicted Next Word |
-| ---------------------- | ------------------- |
-| "The king shall never" | speak               |
-| "My lord I have"       | done                |
-| "To be or not to"      | be                  |
-
----
-
 ## 🛠️ Setup & Installation
 
 ```bash
